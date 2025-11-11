@@ -28,6 +28,13 @@ jobs:
              ls -ltr
              chmod +x ascii_script.sh
              ./ascii_script.sh
+
+         - name: Upload Arti facts
+           uses: actions/upload-artifact@v4
+           with:
+             name: elephant-txt-file
+             path: elephant.txt
+
      shell_job2:
          needs: shell_job1
          runs-on: ubuntu-latest
@@ -40,6 +47,12 @@ jobs:
              echo "welcome"
              ls
              cat README.md
+
+         - name: download Arti facts
+           uses: actions/download-artifact@v5
+           with:
+             name: elephant-txt-file
+             path: elephant.txt
 
          - name: Run shell script
            run: |
