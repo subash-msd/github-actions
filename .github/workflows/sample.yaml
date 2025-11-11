@@ -15,12 +15,12 @@ on:
 jobs:
      first_job:
          runs-on: ubuntu-latest
-              steps:
-              - name: Checkout repo
-                uses: actions/checkout@v5
-              - name: welcome message 
-                run: echo "welcome"
-              - name: list files
-                run: ls
-              - name: read file
-                run: cat README.md
+         steps:
+         - name: Checkout repo
+           uses: actions/checkout@v5
+         - name: welcome message 
+           run: echo "welcome"
+         - name: list file
+           run: ls
+         - name: read file
+           run: cat README.md
