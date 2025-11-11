@@ -28,7 +28,7 @@ jobs:
              ls -ltr
              chmod +x ascii_script.sh
              ./ascii_script.sh
-    shell_job2:
+     shell_job2:
          runs-on: ubuntu-latest
          steps:
          - name: Checkout repo
