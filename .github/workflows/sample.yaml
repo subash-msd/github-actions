@@ -23,5 +23,11 @@ jobs:
              echo "welcome"
              ls
              cat README.md
+         - name: Install cowsay
+           run: sudo apt-get update && sudo apt-get install -y cowsay
+
          - name: Create ASCII art work
            run: cowsay -f elephant "Run for cover I am elephant" >> elephant.txt
+
+         - name: Show file contents
+           run: cat elephant.txt
