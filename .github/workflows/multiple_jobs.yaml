@@ -1,0 +1,47 @@
+name: multiple jobs 
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+ 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+     shell_job1:
+         runs-on: ubuntu-latest
+         steps:
+         - name: Checkout repo
+           uses: actions/checkout@v5
+           
+         - name: welcome message 
+           run: |
+             echo "welcome"
+             ls
+             cat README.md
+
+         - name: Run shell script
+           run: |
+             ls -ltr
+             chmod +x ascii_script.sh
+             ./ascii_script.sh
+    shell_job2:
+         runs-on: ubuntu-latest
+         steps:
+         - name: Checkout repo
+           uses: actions/checkout@v5
+           
+         - name: welcome message 
+           run: |
+             echo "welcome"
+             ls
+             cat README.md
+
+         - name: Run shell script
+           run: |
+             ls -ltr
+             chmod +x ascii_script1.sh
+             ./ascii_script1.sh
