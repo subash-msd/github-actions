@@ -19,8 +19,9 @@ jobs:
          - name: Checkout repo
            uses: actions/checkout@v5
          - name: welcome message 
-           run: echo "welcome"
-         - name: list file
-           run: ls
-         - name: read file
-           run: cat README.md
+           run: |
+             echo "welcome"
+             ls
+             cat README.md
+         - name: Create ASCII art work
+           run: cowsay -f elephant "Run for cover I am elephant" >> elephant.txt
