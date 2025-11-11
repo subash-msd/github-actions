@@ -24,7 +24,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build JAR
+      - name: Build JARs
         run: mvn clean package -DskipTests
 
       - name: Log in to GHCR
