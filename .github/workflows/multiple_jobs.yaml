@@ -52,7 +52,7 @@ jobs:
            uses: actions/download-artifact@v5
            with:
              name: elephant-txt-file
-             path: elephant.txt
+             path: .
 
          - name: Run shell script
            run: |
