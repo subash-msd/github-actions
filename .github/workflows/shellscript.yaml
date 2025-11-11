@@ -24,5 +24,7 @@ jobs:
              ls
              cat README.md
 
-         - name: Shell script
-           run: .\shell.sh
+         - name: Run shell script
+           run: |
+             chmod +x shell.sh
+             ./shell.sh
